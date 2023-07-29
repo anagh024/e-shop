@@ -2,11 +2,11 @@ import { useDispatch, useSelector } from "react-redux"
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom"
 
 export default function Input(){
-    const searchPrams=useSearchParams()
+    const [searchPrams,setSearchPrams]=useSearchParams()
     const dispatch=useDispatch()
     const nav=useNavigate()
     const value=useSelector((state)=>(state.filter.query))
-    console.log(value)
+   // console.log(value)
     return(
         <div className="search">
             <input type="text" onChange={(e)=>{
@@ -20,7 +20,8 @@ export default function Input(){
             
         }
             else{
-                nav('/')
+                searchPrams.delete('name')
+                setSearchPrams(searchPrams)
                
             }
             }}>&#x1F50D;</button>

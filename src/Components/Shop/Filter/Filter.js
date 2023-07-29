@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import Input from "./Input/Input";
 import Option from "./Input/Option";
-import Sslider from "./Slider/SSlider";
 import Slider from "./Slider/Slider";
+import { useSelector } from "react-redux";
 
 export default function Filter(){
     const nav=useNavigate()
-    let options=['toys','HAcking','Sifi']
+    let options=useSelector((state)=>(state.filter.category))
+    //console.log(options);
+    options=Object.keys(options)
+
     return(
         <div  className="filterdiv">
          <div className="inside">
@@ -16,7 +19,6 @@ export default function Filter(){
             </div>
             <div className="inpu">
             <Slider></Slider>
-            <Sslider></Sslider>
             </div>
             <button onClick={()=>{
             nav('/cart')
