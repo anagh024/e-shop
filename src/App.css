@@ -60,7 +60,7 @@ grid-template-columns: max-content 3fr;
 }
 .productsec{
   display: grid;
-  
+  grid-template-columns: clamp(150px,20vw,300px) clamp(150px,20vw,300px) clamp(150px,20vw,300px);
   grid-auto-flow: row;
   padding: 10px;
   gap: 10px;

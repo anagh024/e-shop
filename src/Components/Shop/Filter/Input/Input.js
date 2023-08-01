@@ -17,11 +17,12 @@ export default function Input(){
             if(value){
                 
             nav({pathname:'/',search:`?${createSearchParams({name:value})}`})
-            
+            dispatch({type:'data/search',payload:value})
         }
             else{
                 searchPrams.delete('name')
                 setSearchPrams(searchPrams)
+                dispatch({type:'data/remove-categorey'})
                
             }
             }}>&#x1F50D;</button>

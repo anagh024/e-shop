@@ -1,5 +1,48 @@
 .main{
-    background-color: aqua;
+    
     border: 2px solid black;
-    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    transition: all 0.1 linear;
+    
+}
+.main:hover{
+    opacity: 0.9;
+    transform: scale(1.01);
+    
+}
+.main img{
+    width: 100%;
+    aspect-ratio: 1;
+}
+.bottom{
+    display: grid;
+    grid-template-areas:  "name name"
+                          "price ."
+                          "quantity ad"  ;
+    
+    padding: 0px;
+    margin: 0px;
+    background-color:white;
+}
+
+.bottom :first-child{
+    font-size:clamp(17px,2vw,20px);
+    grid-area: name;
+}
+.bottom :nth-child(2){
+    font-size: 0.89rem;
+    grid-area: price;
+    width: max-content;
+    background-color: aqua;
+}
+.bottom :nth-child(3){
+   grid-area: quantity;
+   
+}
+.bottom :nth-child(4){
+    grid-area: ad;
+    
+    
 }

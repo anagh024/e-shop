@@ -5,31 +5,32 @@ import { createSearchParams, useNavigate, useSearchParams } from "react-router-d
 export default function Option({name}){
     const [searchPrams,setSearchPrams]=useSearchParams()
     const dispatch=useDispatch()
-    const obj={}
-    obj.type='category/change'
-    obj.payload={}
-    obj.payload[name]=true
     const filter=useSelector((state)=>(state.filter.category))
     useEffect(()=>{
-        
+       // console.log(Object.keys(filter).filter((i)=>filter[i]=true).length===a.length)
+       
+        for(let a of Object.keys(filter)){
+            console.log(Object.keys(filter).filter((i)=>filter[i]=true).length===Object.keys(filter).length)
+        }
     })
     return(
         <div>
             <div>
                 <input type="checkbox" onClick={
                     (e)=>{
-                        //console.log(e.target.checked)
+
                       if(e.target.checked){
                       searchPrams.append('category',name)
                       setSearchPrams(searchPrams)
-                      dispatch(obj)
-                      obj.payload[name]=false
+                      dispatch({type:'category/change',payload:{[name]:true}})
+                      if(true){
+                      dispatch({type:'data/single-check',payload:name})
+                    }
                       }
                       else{
-                        dispatch(obj)
-                         searchPrams.delete('category',name)
-                         setSearchPrams(searchPrams)
-                         obj.payload[name]=false
+                        searchPrams.delete('category',name)
+                        setSearchPrams(searchPrams)
+                        dispatch({type:'category/change',payload:{[name]:false}})
                       }
                       }
                     }
