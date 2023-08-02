@@ -7,21 +7,34 @@ export default function Product({item}){
     let reco=initialState
     reco=reco.filter((i)=>(i.category===item[0].category))
     return(
+        
         <div className={style.main}>
-        <div className={style.visual}>
-              <div className={style.smallimages}>
-
-              </div>
-              <img src={item[0].src}></img>
-           </div>
-           <div className={style.textual}>
-            <span>{item[0].name?item[0].name:'N/a'}</span>
-            <span>{item[0].description?item[0].description:'N/a'}</span>
-            <span>{item[0].price?item[0].price:'N/a'}</span>
-            <button>CheckOut</button>
-            <button>Cart</button>
-           </div>
-           <div className={style.recomended}>
+            <div className={style.details}>
+                <div className={style.visuals}>
+                    <div className={style.smallimages}>
+                        <img src={item[0].src}></img>
+                        <img src={item[0].src}></img>
+                        <img src={item[0].src}></img>
+                    </div>
+                    <img src={item[0].src}></img>
+                </div>
+                
+                <div className={style.textual}>
+                    <span className={style.name}>{item[0].name ? item[0].name : 'N/a'}</span>
+                    <p className={style.desc}>{item[0].description ? item[0].description : 'N/a'}</p>
+                    <span className={style.price}>&#8377;  {item[0].price ? item[0].price : 'N/a'}</span>
+                    <div className={style.buttons}>
+                        <div className={style.innerbut}>
+                        <button>CheckOut</button>
+                        <button>Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <h1>Related products</h1>
+        
+    <div className={style.recomended}>
             
             
             {reco.length!==0?reco.map((i,k)=><Recoitem key={k} items={i}></Recoitem>):<span>'no items'</span>}
