@@ -1,9 +1,17 @@
 .App {
   text-align: center;
   outline: 1px solid green;
-  min-height: 100vh;
+  height: 100dvh;
   width: 100vw;
 }
+.root-div{
+  display: grid;
+  grid-template-rows: max-content max-content ;
+  grid-template-columns: 1fr;
+  height: 100dvh;
+  overflow-y: scroll;
+}
+
 .header{
 background-color: black;
 color: white;
@@ -16,11 +24,27 @@ padding: 10px 0px;
   margin: 0px;
 }
 .shop{
+  
   width: 100%;
 display: grid;
 grid-template-columns: max-content 3fr;
 
 }
+.mobile-filter{
+  display: none;
+  
+  border: 2px solid black;
+}
+.mobile-filter img{
+  justify-self: center;
+  width: 30%;
+  
+  
+}
+.mobile-filter button{
+  background-color: rgb(255, 228, 74)
+}
+
 .filterdiv{
   
   background-color:rgba(0, 0, 0, 0.9);
@@ -59,10 +83,58 @@ grid-template-columns: max-content 3fr;
   position: absolute;
 }
 .productsec{
+  justify-self: center;
   display: grid;
-  grid-template-columns: clamp(150px,20vw,300px) clamp(150px,20vw,300px) clamp(150px,20vw,300px);
+  grid-template-columns: repeat(5,clamp(150px,20vw,300px)) ;
   grid-auto-flow: row;
   padding: 10px;
   gap: 10px;
+}
+@media only screen and (max-width:1772px) {
+  .productsec{
+  grid-template-columns:repeat(4,clamp(150px,20vw,300px));
+}}
+@media only screen and (max-width:872px) {
+  .productsec{
+  grid-template-columns:  clamp(150px,20vw,300px) clamp(150px,20vw,300px);
+}}
+@media only screen and (max-width:558px) {
+  .filterdiv{
+    display: none;
   
+}}
+@media only screen and (max-width:1386px) {
+  .productsec{
+  grid-template-columns:repeat(3,clamp(160px,30vw,310px));
+}
+
+}
+@media only screen and (max-width:1218px) {
+  .productsec{
+  grid-template-columns:repeat(2,clamp(170px,40vw,320px));
+}}
+@media only screen and (max-width:908px) {
+  .productsec{
+    justify-self: center;
+  grid-template-columns:repeat(2,clamp(170px,40vw,320px));
+}
+.filterdiv{
+  display: none;
+}
+.mobile-filter{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  position: fixed;
+  bottom: 0dvh;
+  right: 0px ;
+  left: 0px;
+}
+.shop{
+  grid-template-columns: 1fr;
+}
+}
+.root-footer{
+  background-color: grey;
+  height: 200px;
 }

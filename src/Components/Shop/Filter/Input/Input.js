@@ -11,18 +11,26 @@ export default function Input(){
         <div className="search">
             <input type="text" onChange={(e)=>{
                 dispatch({type:'query/change',payload:e.target.value})
+                if(e.target.value===''){
+                    dispatch({type:'data/load-all'})
+                    searchPrams.delete('name')
+                setSearchPrams(searchPrams)
+                }
 
-            }} value={value}></input>
+            }} value={value}
+            
+            ></input>
+
             <button onClick={()=>{
             if(value){
-                
-            nav({pathname:'/',search:`?${createSearchParams({name:value})}`})
-            dispatch({type:'data/search',payload:value})
+            searchPrams.set('name',value)
+            setSearchPrams(searchPrams)
+             dispatch({type:'data/query-check',payload:value})
         }
             else{
                 searchPrams.delete('name')
                 setSearchPrams(searchPrams)
-                dispatch({type:'data/remove-categorey'})
+                dispatch({type:'data/load-all'})
                
             }
             }}>&#x1F50D;</button>

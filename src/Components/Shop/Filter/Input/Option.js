@@ -1,17 +1,21 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom"
+import { checker } from "./checker"
 
 export default function Option({name}){
     const [searchPrams,setSearchPrams]=useSearchParams()
     const dispatch=useDispatch()
+    let result=[]
     const filter=useSelector((state)=>(state.filter.category))
+    Object.keys(filter).forEach((i)=>{
+        result.push(filter[i])
+    })
+    //console.log(result)
+    result=checker(result)
     useEffect(()=>{
        // console.log(Object.keys(filter).filter((i)=>filter[i]=true).length===a.length)
        
-        for(let a of Object.keys(filter)){
-            console.log(Object.keys(filter).filter((i)=>filter[i]=true).length===Object.keys(filter).length)
-        }
     })
     return(
         <div>
@@ -23,15 +27,23 @@ export default function Option({name}){
                       searchPrams.append('category',name)
                       setSearchPrams(searchPrams)
                       dispatch({type:'category/change',payload:{[name]:true}})
-                      if(true){
+                      if(!result){
                       dispatch({type:'data/single-check',payload:name})
+                    }
+                    else{
+                        dispatch({type:'data/multi-check',payload:name})
                     }
                       }
                       else{
                         searchPrams.delete('category',name)
                         setSearchPrams(searchPrams)
                         dispatch({type:'category/change',payload:{[name]:false}})
-                      }
+                        if(!searchPrams.has('category')){
+                         dispatch({type:'data/load-all'})
+                        }
+                        else{
+                        dispatch({type:'data/uncheck-multi',payload:name})
+                      }}
                       }
                     }
             ></input>
