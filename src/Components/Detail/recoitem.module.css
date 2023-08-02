@@ -1,14 +1,21 @@
 .main{
-    background-color: cadetblue;
+    
     display: flex;
     flex-direction: column;
-    
+    border: 2px solid black;
 }
 .main img{
     width: 100%;
     aspect-ratio: 1;
+    border-radius: 0px;
 }
 .main div{
+    font-weight: 600;
     display: flex;
     flex-direction: column;
+}
+
+.bottom :nth-child(2){
+    color: green;
+    font-weight: bolder;
 }

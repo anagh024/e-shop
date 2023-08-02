@@ -18,6 +18,7 @@
 .visuals img{
   width: clamp(200px,100%,700px);
   align-self: center;
+  /* outline: 4px solid rgb(79, 211, 255); */
   
 }
 .smallimages{
@@ -32,7 +33,11 @@
 }
 .smallimages img{
   width: clamp(40px,100%,100px);
+  
  
+}
+.smallimages img:active{
+  outline: 2px solid rgb(76, 76, 219);
 }
 .textual{
   display: grid;
@@ -75,16 +80,33 @@ font-family: 'Rowdies', cursive;
   align-items: center;
 }
 .innerbut{
-  width: 50%;
+  width: 90%;
   display: flex;
   justify-content: space-around;
 }
+@media only screen and (min-width:1226px) {
+  .innerbut{
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+  
+}
 .buttons button{
-  font-size: clamp(12px,1.3vw,20px);
+  font-size: clamp(15px,1.3vw,20px);
+  width: 80%;
+  margin: 0px 5px;
   background-color: yellow;
   padding: 5px;
   border-radius: 5px;
+  font-weight: 500;
   border: 2px solid rgb(0, 0, 0);
+}
+@media only screen and (min-width:862px){
+  .buttons button{
+    font-size: clamp(15px,1.3vw,20px);
+    width: 100px;
+  }
 }
 .buttons button:hover{
   background-color: transparent;
@@ -97,7 +119,14 @@ font-family: 'Rowdies', cursive;
   width: 95%;
   border-top: 5px solid black;
 }
-.recomended{display: none;}
+.recomended{
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(3,3fr);
+  grid-gap: clamp(5px,1vh,20px);
+  
+}
 @media only screen and (max-width:576px) {
   .innerbut{
     margin-top: 10px;
@@ -110,23 +139,25 @@ font-family: 'Rowdies', cursive;
     padding: 2px 5px;
     border-radius: 5px;
     border: 2px solid rgb(0, 0, 0);
+
   }
+  
 }
 @media only screen and (max-width:500px) {
   .main{
-    padding-top: 10px;
+    padding-top: 0px;
   }
   .details{
-    height: max-content;
+    height: 100%;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1.5fr;
+    grid-template-rows: 1fr 0.6fr;
   }
   .visuals{
     /* border: 2px solid black; */
-    width: 95%;
-    margin: auto;
+    width: 90%;
+    margin:20px  auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr max-content;
@@ -137,19 +168,80 @@ font-family: 'Rowdies', cursive;
     align-items: center;
     margin: auto;
     height: max-content;
-    width: 80%;
+    width: 90%;
     margin-top: 5px;
     flex-direction: row;
     order: 1;
+  }
+  .smallimages img{
+    margin: 2px;
   }
   .textual{
     height: min-content;
     width: 90%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4,'max-content');
-    background-color: aqua;
-    margin: 5px auto;
-    align-self: center;
-  }
+    
+    margin: 10px auto;
+    }
+    .buttons button{
+      font-size: clamp(13px,1.3vw,20px);
+      
+      background-color: yellow;
+      padding: 5px;
+      border-radius: 5px;
+      border: 2px solid rgb(0, 0, 0);
+    }
+    .name{
+      
+      font-size: clamp(30px,5vw,60px);
+    }
+    .big{
+      
+      font-size:clamp(19px,1.42vw,26px);
+    }
+    .desc{
+      margin: 15px 0px 10px 0px;
+      font-size:clamp(15px,1.3vw,25px) ;
+    }
+    .price{
+      margin-bottom:5px;
+      
+      font-size:clamp(15px,1.4vw,27px) ;
+    }
+    .main h1{
+      width: 90%;
+      font-size:clamp(20px,6vw,30px);
+    }
+    .recomended{
+      display: grid;
+      width: 80%;
+      margin: 0px auto 10px auto;
+      grid-template-columns: repeat(2,3fr);
+      grid-gap: clamp(5px,1vh,20px);
+      
+    }
 
 }
+@media only screen and (min-width:860px) {
+  .recomended{
+    display: grid;
+    width: clamp(800px,80%,1000px);
+    margin: 0px auto 10px auto;
+    grid-template-columns: repeat(4,3fr);
+    grid-gap: clamp(5px,1vh,20px);
+    
+  }
+}
+@media only screen and (min-width:1624px) {
+  .recomended{
+    display: grid;
+    width: clamp(800px,80%,1000px);
+    margin: 0px auto 10px auto;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: clamp(5px,1vh,20px);
+    
+    
+  }
+}
+

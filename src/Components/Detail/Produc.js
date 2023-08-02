@@ -5,7 +5,7 @@ import EachItem from '../Shop/Items/eachItem'
 import Recoitem from './Recoitem'
 export default function Product({item}){
     let reco=initialState
-    reco=reco.filter((i)=>(i.category===item[0].category))
+    reco=reco.filter((i)=>(i.category===item[0].category&&i.name!==item[0].name))
     return(
         
         <div className={style.main}>
