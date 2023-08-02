@@ -4,12 +4,13 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3,'min-content');
 }
+.main img{border-radius: 5px;}
 .details{
   display: grid;
   grid-template-columns: 2fr 1.5fr;
 }
 .visuals{
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr;
@@ -38,9 +39,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4,'max-content');
   margin-left:clamp(10px,3vw,80px) ;
+  margin-right: 5px;
 }
 .name{
-  
+  text-decoration: underline;
   display: flex;
   align-items: center;
   /* background-color: brown; */
@@ -49,6 +51,9 @@
   font-family: 'Archivo Black', sans-serif;
 font-family: 'Patua One', cursive;
 font-family: 'Rowdies', cursive;
+}
+.big{font-size:clamp(14px,1.42vw,26px);
+  font-weight: bolder;
 }
 .desc{
   margin: 0px;
@@ -61,6 +66,8 @@ font-family: 'Rowdies', cursive;
   align-items: center;
   font-size:clamp(13px,1.4vw,27px) ;
   /* background-color: chocolate; */
+  color: green;
+  font-weight: 900;
 }
 .buttons{
   display: flex;
@@ -85,7 +92,64 @@ font-family: 'Rowdies', cursive;
 }
 .main h1{
   /* background-color: aqua; */
-  margin: 0px;
+
+  margin: 15px auto;
+  width: 95%;
   border-top: 5px solid black;
 }
 .recomended{display: none;}
+@media only screen and (max-width:576px) {
+  .innerbut{
+    margin-top: 10px;
+    width: 90%;
+    
+  }
+  .buttons button{
+    font-size: clamp(10px,1vw,20px);
+    background-color: yellow;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+  }
+}
+@media only screen and (max-width:500px) {
+  .main{
+    padding-top: 10px;
+  }
+  .details{
+    height: max-content;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1.5fr;
+  }
+  .visuals{
+    /* border: 2px solid black; */
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    order: -1;
+  }
+  .smallimages{
+    /* background-color: aqua; */
+    align-items: center;
+    margin: auto;
+    height: max-content;
+    width: 80%;
+    margin-top: 5px;
+    flex-direction: row;
+    order: 1;
+  }
+  .textual{
+    height: min-content;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,'max-content');
+    background-color: aqua;
+    margin: 5px auto;
+    align-self: center;
+  }
+
+}

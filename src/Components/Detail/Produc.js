@@ -21,7 +21,7 @@ export default function Product({item}){
                 
                 <div className={style.textual}>
                     <span className={style.name}>{item[0].name ? item[0].name : 'N/a'}</span>
-                    <p className={style.desc}>{item[0].description ? item[0].description : 'N/a'}</p>
+                    <p className={style.desc}><span className={style.big}>Description:-</span>{item[0].description ? item[0].description : 'N/a'}</p>
                     <span className={style.price}>&#8377;  {item[0].price ? item[0].price : 'N/a'}</span>
                     <div className={style.buttons}>
                         <div className={style.innerbut}>
