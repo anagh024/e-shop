@@ -1,7 +1,15 @@
+
+import CartItem from './Components/CartItem'
+import Mtotal from './Components/Total/Mtotal'
+import Total from './Components/Total/Total'
+import style from './cart.module.css'
 export default function Cart(){
     return(
-        <div className="main">
-            <h1>Currently empty</h1>
+        <div className={style.main}>
+            
+            <CartItem></CartItem>
+            <Total></Total>
+            <Mtotal></Mtotal>
         </div>
     )
 }

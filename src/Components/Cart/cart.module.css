@@ -1,0 +1,24 @@
+.main{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    
+    
+    
+}
+.main :nth-child(1){
+    
+}
+.main :nth-child(2){
+  
+}
+
+.main :nth-child(3){
+    display: none;
+    
+}
+@media only screen and (max-width:722px) {
+    .main :nth-child(2){
+  display: none;
+    }
+}

@@ -11,9 +11,10 @@ return(
         <span>{items.name}</span>
         
         <span>&#8377; {items.price}</span>
-        <button onClick={()=>{
+        {/* <button onClick={()=>{
             dispatch({type:'cart/add-items',payload:items})
-        }}>Add</button>
+            
+        }}>Add</button> */}
         </div>
     </div>
 )

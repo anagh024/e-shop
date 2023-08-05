@@ -4,7 +4,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3,'min-content');
 }
-.main img{border-radius: 5px;}
+.main img{border-radius: 5px;
+}
 .details{
   display: grid;
   grid-template-columns: 2fr 1.5fr;
@@ -16,12 +17,14 @@
   grid-template-columns: 1fr 4fr;
 }
 .visuals img{
+  
   width: clamp(200px,100%,700px);
   align-self: center;
   /* outline: 4px solid rgb(79, 211, 255); */
   
 }
 .smallimages{
+
   display: flex;
   justify-content: space-around;
   /* background-color: aqua; */
@@ -33,7 +36,7 @@
 }
 .smallimages img{
   width: clamp(40px,100%,100px);
-  
+  border: 2px solid rgb(197, 195, 190);
  
 }
 .smallimages img:active{
@@ -57,19 +60,19 @@
 font-family: 'Patua One', cursive;
 font-family: 'Rowdies', cursive;
 }
-.big{font-size:clamp(14px,1.42vw,26px);
+.big{font-size:clamp(14px,2vw,26px);
   font-weight: bolder;
 }
 .desc{
   margin: 0px;
-  font-size:clamp(12px,1.3vw,25px) ;
+  font-size:clamp(13px,1.8vw,25px) ;
   text-align: start;
   /* background-color:cyan; */
 }
 .price{
   display: flex;
   align-items: center;
-  font-size:clamp(13px,1.4vw,27px) ;
+  font-size:clamp(13px,1.6vw,27px) ;
   /* background-color: chocolate; */
   color: green;
   font-weight: 900;
