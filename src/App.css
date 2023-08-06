@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  outline: 1px solid green;
+  
   height: 100dvh;
   width: 100vw;
 }
@@ -130,6 +130,15 @@ grid-template-columns: max-content 3fr;
   right: 0px ;
   left: 0px;
 }
+.mobile-filter button{
+  background-color: rgb(255, 255, 58);
+  border: 0px;
+
+}
+.mobile-filter .border-color{
+  
+  border-right:5px solid black ;
+}
 .shop{
   grid-template-columns: 1fr;
 }
@@ -137,4 +146,11 @@ grid-template-columns: max-content 3fr;
 .root-footer{
   background-color: grey;
   height: 200px;
+}
+.search-bar-mobile{
+  position: absolute;
+  top: -90px;
+  right: 50px ;
+  left: 20px;
+  background-color: aqua;
 }
