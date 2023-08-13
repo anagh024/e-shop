@@ -9,11 +9,7 @@
     transition: all 0.1 linear;
     
 }
-.main:hover{
-    opacity: 0.8;
-    transform: scale(1.008);
-    
-}
+
 .main img{
     width: 100%;
     aspect-ratio: 1;

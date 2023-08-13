@@ -4,14 +4,30 @@ import style from './detail.module.css'
 import EachItem from '../Shop/Items/eachItem'
 import Recoitem from './Recoitem'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 export default function Product({item}){
     const dispatch=useDispatch()
     let reco=initialState
+    const ref=useRef()
     const nav=useNavigate()
+    const totalCart=useSelector((state)=>(state.cart))
     reco=reco.filter((i)=>(i.category===item[0].category&&i.name!==item[0].name))
+    
+    useEffect(()=>{
+        
+        ref.current.setAttribute('data-itmes',totalCart.length)
+        
+
+    })
     return(
         
         <div className={style.main}>
+            <div className={style.icon}>
+<button className={style.home} onClick={()=>{
+    nav('/')
+}}><i class="fa fa-home"></i> </button>
+
+            </div>
             <div className={style.details}>
                 <div className={style.visuals}>
                     <div className={style.smallimages}>
@@ -30,7 +46,8 @@ export default function Product({item}){
                     </div>
                     <div className={style.buttons}>
                         <div className={style.innerbut}>
-                        <button  onClick={()=>{
+                            <span ref={ref}>{totalCart.length}</span>
+                        <button onClick={()=>{
                              nav('/cart')
                           
                         }}>CheckOut</button>

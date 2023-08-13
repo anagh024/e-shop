@@ -15,6 +15,8 @@
 .main img{
     width: clamp(150px,20vw,350px);
     aspect-ratio: 1/0.7;
+    align-self: center;
+    justify-self:center;
     
 }
 .detail{
@@ -30,8 +32,25 @@
     align-items: start;
     
 }
-.detail :nth-child(2){
+.price{
     color: rgb(28, 158, 28);
     font-size: clamp(12px,1.7vw,25px);
     font-weight: 800;
+}
+.quantity span{
+    font-size: clamp(5px,2vw,25px);
+}
+.quantity input{
+    width: 20px;
+}
+.remove{
+    background-color: red;
+    border: 2px solid red ;
+    font-weight: 550;
+    padding: clamp(2px,0.2vw,10px) clamp(3px,1vw,10px);
+    border-radius: 5px;
+}
+.remove:hover{
+    background-color: transparent;
+    color: red;
 }

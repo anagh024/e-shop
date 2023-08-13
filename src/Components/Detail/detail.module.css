@@ -83,9 +83,21 @@ font-family: 'Rowdies', cursive;
   align-items: center;
 }
 .innerbut{
+  position: relative;
   width: 90%;
   display: flex;
   justify-content: space-around;
+}
+.innerbut span[data-itmes]{
+  position: absolute;
+  left: -15px;
+  top:-15px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+.innerbut span[data-itmes='0']{
+  display: none;
 }
 @media only screen and (min-width:1226px) {
   .innerbut{
@@ -105,13 +117,16 @@ font-family: 'Rowdies', cursive;
   font-weight: 500;
   border: 2px solid rgb(0, 0, 0);
 }
+.buttons [data-hasItems]{
+  background-color: green;
+}
 @media only screen and (min-width:862px){
   .buttons button{
     font-size: clamp(15px,1.3vw,20px);
     width: 100px;
   }
 }
-.buttons button:hover{
+.buttons button:active{
   background-color: transparent;
   border: 2px solid yellow;
 }
@@ -144,6 +159,7 @@ font-family: 'Rowdies', cursive;
     border: 2px solid rgb(0, 0, 0);
 
   }
+  
   
 }
 @media only screen and (max-width:500px) {
@@ -247,4 +263,29 @@ font-family: 'Rowdies', cursive;
     
   }
 }
+.icon{
+  z-index: 1;
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+}
+.icon button{
+  font-size: 30px;
+  color:  rgb(255, 239, 18);
+  background-color: rgb(17, 120, 238);
+  border: 2px solid black;
+  border-radius:15px ;
+  animation-name: animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* @keyframes animate {
+  from{
+    color:rgb(215, 230, 12);;
+  }
+  to{
+    color:rgb(165, 175, 24);;
+  }
+} */
 

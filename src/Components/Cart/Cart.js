@@ -9,7 +9,7 @@ export default function Cart(){
             
             <CartItem></CartItem>
             <Total></Total>
-            <Mtotal></Mtotal>
+            {false?<Mtotal></Mtotal>:null}
         </div>
     )
 }

@@ -33,7 +33,7 @@ grid-template-columns: max-content 3fr;
 .mobile-filter{
   display: none;
   
-  border: 2px solid black;
+  
 }
 .mobile-filter img{
   justify-self: center;
@@ -41,8 +41,15 @@ grid-template-columns: max-content 3fr;
   
   
 }
-.mobile-filter button{
-  background-color: rgb(255, 228, 74)
+.border-color {
+  background-color: rgb(255, 228, 74);
+  border: 0px;
+  
+  
+}
+.border-colorr {
+  background-color: rgb(255, 228, 74);
+  border:0px ;
 }
 
 .filterdiv{
@@ -67,9 +74,9 @@ grid-template-columns: max-content 3fr;
   border: 0px;
   height: 20px;
 }
-.search input:focus{
+/* .search input:focus{
   outline: 1px solid yellow;
-}
+} */
 .search button{
   border: 0px;
   border-left: 2px solid black;
@@ -130,11 +137,11 @@ grid-template-columns: max-content 3fr;
   right: 0px ;
   left: 0px;
 }
-.mobile-filter button{
+/* .mobile-filter button{
   background-color: rgb(255, 255, 58);
   border: 0px;
 
-}
+} */
 .mobile-filter .border-color{
   
   border-right:5px solid black ;
@@ -144,8 +151,18 @@ grid-template-columns: max-content 3fr;
 }
 }
 .root-footer{
-  background-color: grey;
+  background-color: black;
+  color:gray;
   height: 200px;
+  display: flex;
+  align-items: center;
+  
+  justify-content: center;
+}
+
+.root-footer img{
+  width: 100px;
+  
 }
 .search-bar-mobile{
   position: absolute;
@@ -153,4 +170,17 @@ grid-template-columns: max-content 3fr;
   right: 50px ;
   left: 20px;
   background-color: aqua;
+}
+
+.flag{
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid white;
+}
+.contact{
+  display: inline-flex;
+  border: 2px solid wheat;
+}
+.logo{
+  font-size: 40px;
 }

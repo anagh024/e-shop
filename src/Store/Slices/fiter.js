@@ -12,7 +12,8 @@ export const filterReducer=(state=initialState,action)=>{
         case 'query/change':
             return{...state,query:action.payload}
         case 'category/change':
-            return{...state,category:{...state.category,...action.payload}}
+            
+            return{...state,category:{...state.category,...action.paylaod}}
         case 'price/change':
             return {...state,price:action.payload}
         default:
