@@ -56,16 +56,46 @@ grid-template-columns: max-content 3fr;
   
   background-color:rgba(0, 0, 0, 0.9);
   color:white;
+  
 }
 .inside{
   padding:10px;
   position: sticky;
   top: 0px;
-}
-.checkbuttonsdiv{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  height: 85vh;
+  justify-content: space-between;
+  
+}
+.seachBar h2{
+margin: 0px;
+margin-bottom: 5px;
+font-size: 28px;
+}
+.checkbuttonsdiv{
+  border-bottom: 2px solid rgb(116, 115, 115);
+  border-top: 2px solid rgb(116, 115, 115);
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 30vh;
+  grid-template-rows: max-content 1fr;
+}
+.checkbuttonsdiv h2{
+  font-size: 28px;
+  margin: 2px;
+}
+.innercheckButtons{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-size: 20px;
+}
+.checkbox input{
+  height: 18px;
+  width: 18px;
 }
 .search{
   display: flex;
@@ -88,6 +118,19 @@ grid-template-columns: max-content 3fr;
 .inpu span{
   color: black;
   position: absolute;
+}
+.cartButton{
+  background-color: yellow;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  font-weight: bolder;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.2s linear;
+}
+.cartButton:hover{
+  background-color: transparent;
+  color: yellow;
 }
 .productsec{
   justify-self: center;
@@ -133,9 +176,13 @@ grid-template-columns: max-content 3fr;
   grid-template-columns: 1fr 1fr;
   
   position: fixed;
-  bottom: 0dvh;
+  bottom: 0vh;
+  
   right: 0px ;
   left: 0px;
+}
+.popup{
+  
 }
 /* .mobile-filter button{
   background-color: rgb(255, 255, 58);
@@ -148,6 +195,7 @@ grid-template-columns: max-content 3fr;
 }
 .shop{
   grid-template-columns: 1fr;
+  
 }
 }
 .root-footer{
@@ -169,7 +217,7 @@ grid-template-columns: max-content 3fr;
   top: -90px;
   right: 50px ;
   left: 20px;
-  background-color: aqua;
+  
 }
 
 .flag{

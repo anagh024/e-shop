@@ -18,19 +18,32 @@
     border: 2px solid black;
     border-radius: 15px;
     overflow: hidden;
-
+    margin-top: 30px;
+  
+    
+}
+.input input{
+    height: 32px;
+    font-size: 18px;
+    width: 55vw;
+    
 }
 .option{
+    
+    
     margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: start;
+    font-size: 20px;
+    font-weight: bold;
 }
 .cross{
 position: absolute;
-top: 5px;
-right: 5px;
+top: 3px;
+right: 3px;
 border: 0px;
+font-size: 18px;
 background-color: transparent;
 
 }

@@ -1,6 +1,5 @@
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import src from '../../pngwing.com.png'
-import src_t from '../../pngwing1.com.png'
+
 import MobileOptions from './mobileoption/mobileoption'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'

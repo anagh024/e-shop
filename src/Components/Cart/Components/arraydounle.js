@@ -6,7 +6,7 @@ export default function single(a){
         
       if(JSON.stringify(a[i])===JSON.stringify(a[j])){
         a[i].orderquantity+=1;
-        a.splice(j,1)
+        //a.splice(j,1)
         
         
       }

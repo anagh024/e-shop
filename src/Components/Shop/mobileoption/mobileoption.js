@@ -4,12 +4,12 @@ import Option from "../Filter/Input/Option";
 import style from './mobile.module.css'
 import Input from '../Filter/Input/Input';
 import Slider from '../Filter/Slider/Slider';
-export default function MobileOptions({show,setShow,check}){
+export default function MobileOptions({setShow}){
     let category=useSelector((state)=>(state.filter.category))
     
     category=Object.keys(category)
     return(
-        <div>
+        <div className='popup'>
         <div className={style.outer} tabIndex={2} onClick={()=>{
             setShow(false)
         }}>

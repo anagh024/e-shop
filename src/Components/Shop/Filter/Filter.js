@@ -13,12 +13,18 @@ export default function Filter(){
     return(
         <div  className="filterdiv">
          <div className="inside">
+            <div className="seachBar">
+            <h2>Filter</h2>
             <Input></Input>
+            </div>
             <div className="checkbuttonsdiv">
+            <h2>Category</h2>
+            <div className="innercheckButtons">
             {options.map((i,j)=>(<Option name={i} key={j}></Option>))}
             </div>
+            </div>
             
-            <button onClick={()=>{
+            <button className="cartButton" onClick={()=>{
             nav('/cart')
             }}>Cart</button>
             </div>

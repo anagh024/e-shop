@@ -37,7 +37,7 @@ export default function Option({name}){
     },[filter])
     return(
         <div>
-            <div>
+            <div className="checkbox">
                 <input type="checkbox" 
                 checked={filter[name]}
                 onChange={(e)=>{
