@@ -17,9 +17,7 @@ export default function Filter(){
             <div className="checkbuttonsdiv">
             {options.map((i,j)=>(<Option name={i} key={j}></Option>))}
             </div>
-            <div className="inpu">
-            <Slider></Slider>
-            </div>
+            
             <button onClick={()=>{
             nav('/cart')
             }}>Cart</button>

@@ -25,7 +25,7 @@ setShow(false)
          <div className={style.option}>
          {category.map((i,j)=>(<Option name={i}  key={j}></Option>))}
          </div>
-         <Slider></Slider>
+        
         </div>
        
         </div>

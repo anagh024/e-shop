@@ -13,7 +13,7 @@ export const dataReducer=(state=initialState,action)=>{
         case 'data/multipleCategory':
             return initialState.filter((i)=>action.payload.includes(i.category))
         case 'data/otherPlusCategorySingle':
-            return state.filter((i)=>i.category===action.payload)
+            return initialState.filter((i)=>i.name.includes(action.payload.query)).filter((i)=>i.category===action.payload.category)
         case 'data/otherPlusCategoryMultiple':
             return initialState.filter((i)=>i.name.includes(action.payload.query)).filter((i)=>action.payload.array.includes(i.category))
             default:

@@ -13,7 +13,7 @@ export default function Slider(){
                 seachPrams.set('price',e.target.value*1000)
                 setSeachPrams(seachPrams)
 
-            dispatch({type:'data/price-check',payload:Number(e.target.value)*1000})
+            dispatch({type:'data/price-check',payload:Number(e.target.value)*100})
                dispatch({type:'price/change',payload:Number(e.target.value)*1000})
                
             }}

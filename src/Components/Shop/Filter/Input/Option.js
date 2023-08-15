@@ -19,17 +19,20 @@ export default function Option({name}){
         if(!searchPrams.has('name')&&!searchPrams.has('price')&&!Object.values(filter).filter((i)=>i===true).length<1){
         dispatch({type:'data/multipleCategory',payload:Object.keys(filter).filter((i)=>(filter[i]===true))})}
         else if((searchPrams.has('name')||searchPrams.has('price'))&&Object.values(filter).filter((i)=>i===true).length===1&&checked){
-            dispatch({type:'data/otherPlusCategorySingle',payload:name})
+            dispatch({type:'data/otherPlusCategorySingle',payload:{query:searchPrams.get('name'),category:name}})
             
         }
-        else if((searchPrams.has('name')||searchPrams.has('price'))&&Object.values(filter).filter((i)=>i===true).length>1){
+        else if((searchPrams.has('name'))&&Object.values(filter).filter((i)=>i===true).length>1){
             dispatch({type:'data/otherPlusCategoryMultiple',payload:{query:searchPrams.get('name'),array:Object.keys(filter).filter((i)=>(filter[i]===true))}})
             
         }
+        else if(searchPrams.has('name')&&Object.values(filter).filter((i)=>i===true).length===0){
+            dispatch({type:'data/query-check',payload:searchPrams.get('name')})
+        }
         // console.log(Object.values(filter).filter((i)=>i===true))
-        else if(!searchPrams.has('name')&&!searchPrams.has('price')&&Object.values(filter).filter((i)=>i===true).length===0){
+        else if(!searchPrams.has('name')&&Object.values(filter).filter((i)=>i===true).length===0){
             dispatch({type:'data/load-all'})
-            console.log('dispatched')
+            //console.log('dispatched')
         }
     },[filter])
     return(
@@ -48,7 +51,7 @@ export default function Option({name}){
                 }
 
                     
-                  }else if(!searchPrams.has('name')&&!searchPrams.has('price')&&Object.values(filter).filter((i)=>i===true).length===0){
+                  }else if(!searchPrams.has('name')&&Object.values(filter).filter((i)=>i===true).length===0){
                     dispatch({type:'data/load-all'})
                     console.log('dispatched')
                 }
