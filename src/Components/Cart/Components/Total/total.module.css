@@ -5,7 +5,7 @@
     position: sticky;
     top:10px;
     font-weight: 600;
-    padding: 10px;
+    padding: 10px 5px;
     border-radius: 5px;
     background-color: rgb(231, 231, 230);
     padding: 10px 0px;
@@ -19,14 +19,15 @@
     }
 }
 .heading{
-    font-size:clamp(20px,3vw,33px);
+    padding: 15px;
+    font-size:clamp(15px,3vw,33px);
     display: block;
    margin-bottom: 20px;
 }
 .items{
 
     display: flex;
-    font-size:clamp(17px,2.5vw,27px) ;
+    font-size:clamp(12px,2.5vw,27px) ;
     
 }
 .items span{
@@ -53,4 +54,33 @@
     
     font-size:clamp(20px,2.7vw,29px) ;
     color: red;
+}
+.buttons{
+    
+    display: grid;
+    width: 80%;
+    margin: auto;
+    
+}
+.buttons button{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    
+
+}
+.buttons :first-child{
+    border: 2px solid yellow;
+    background-color: yellow;
+}
+
+.buttons :nth-child(2){
+    background-color:  rgb(255, 208, 0);
+    border: 2px solid rgb(255, 208, 0);
+}
+
+@media only screen and (max-width:908px) {
+    .main{
+        display: none;
+    }
 }

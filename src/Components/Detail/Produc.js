@@ -4,9 +4,10 @@ import style from './detail.module.css'
 import EachItem from '../Shop/Items/eachItem'
 import Recoitem from './Recoitem'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 export default function Product({item}){
     const dispatch=useDispatch()
+    const [image,setImage]=useState(item[0].src)
     let reco=initialState
     const ref=useRef()
     const nav=useNavigate()
@@ -31,11 +32,11 @@ export default function Product({item}){
             <div className={style.details}>
                 <div className={style.visuals}>
                     <div className={style.smallimages}>
-                        <img src={item[0].src}></img>
+                        <img onClick={()=>{setImage(item[0].img[0])}}src={item[0].img[0]}></img>
                         <img src={item[0].src}></img>
                         <img src={item[0].src}></img>
                     </div>
-                    <img src={item[0].src}></img>
+                    <img src={image}></img>
                 </div>
                 
                 <div className={style.textual}>

@@ -6,19 +6,12 @@
     
     
 }
-.main :nth-child(1){
-    
-}
-.main :nth-child(2){
-  
+.mobile{
+    display: none;
 }
 
-.main :nth-child(3){
-    /* display: none; */
-    
-}
-@media only screen and (max-width:722px) {
-    .main :nth-child(2){
-  /* display: none; */
+@media only screen and (max-width:908px) {
+    .mobile{
+        display: block;
     }
 }

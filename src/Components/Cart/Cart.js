@@ -9,7 +9,9 @@ export default function Cart(){
             
             <CartItem></CartItem>
             <Total></Total>
-            {false?<Mtotal></Mtotal>:null}
+            <div className={style.mobile}>
+            <Mtotal></Mtotal>
+            </div>
         </div>
     )
 }

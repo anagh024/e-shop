@@ -5,7 +5,7 @@
     margin: 5px auto;
 
     
-    width: min(80%,900px);
+    width: min(90%,900px);
     display: grid;
     grid-template-columns: max-content 1fr;
     align-content: center;
@@ -53,4 +53,9 @@
 .remove:hover{
     background-color: transparent;
     color: red;
+}
+@media only screen and (max-width:908px) {
+    .main{
+        width: 80%;
+    }
 }
