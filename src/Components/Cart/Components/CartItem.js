@@ -12,7 +12,7 @@ export default function CartItem(){
     const [item,setItem]=useState(items)
     useEffect(()=>{
         setItem(single(item))
-        console.log(single(item))
+       // console.log(single(item))
     },[])
     
     return(
