@@ -123,7 +123,12 @@ font-family: 'Rowdies', cursive;
   background-color: green;
 }
 @media only screen and (min-width:862px){
+  .buttons{
+    
+    width: max-content;
+  }
   .buttons button{
+    
     font-size: clamp(15px,1.3vw,20px);
     width: 100px;
   }
@@ -154,6 +159,7 @@ font-family: 'Rowdies', cursive;
     
   }
   .buttons button{
+    
     font-size: clamp(10px,1vw,20px);
     background-color: yellow;
     padding: 2px 5px;
@@ -272,6 +278,7 @@ font-family: 'Rowdies', cursive;
   right: 10px;
 }
 .icon button{
+  
   font-size: 30px;
   color:  rgb(255, 239, 18);
   background-color: rgb(17, 120, 238);
