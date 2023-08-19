@@ -10,11 +10,8 @@ return(
         <div className={style.bottom}>
         <span>{items.name}</span>
         
-        <span>&#8377; {items.price}</span>
-        {/* <button onClick={()=>{
-            dispatch({type:'cart/add-items',payload:items})
-            
-        }}>Add</button> */}
+        <span style={items.price?null:{color:'red'}}><span style={items.price?null:{display:'none'}}>&#8377;</span> {items.price?items.price:'Out of Stock'}</span>
+        
         </div>
     </div>
 )

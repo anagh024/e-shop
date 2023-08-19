@@ -8,17 +8,19 @@ import EmptyCart from './Emptycart'
 import single from './arraydounle'
 export default function CartItem(){
     let items=useSelector((state)=>state.cart)
+    
     items=arryconv(items)
+    items=single(items)
     const [item,setItem]=useState(items)
-    useEffect(()=>{
-        setItem(single(item))
-       // console.log(single(item))
-    },[])
+    // useEffect(()=>{
+    //     setItem(single(item))
+       
+    // },[])
     
     return(
         <div>
             
-            {item.length!==0?item.map((i,k)=>{
+            {items.length!==0?items.map((i,k)=>{
                 
             return <EachCartItem key={k} src={i.src} price={i.price}name={i.name} quantity={i.orderquantity}></EachCartItem>}):<EmptyCart></EmptyCart>}
         </div>

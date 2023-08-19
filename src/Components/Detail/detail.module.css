@@ -19,6 +19,7 @@
 .visuals img{
   
   width: clamp(200px,100%,700px);
+  aspect-ratio: 1/0.6;
   align-self: center;
   /* outline: 4px solid rgb(79, 211, 255); */
   
@@ -36,6 +37,7 @@
 }
 .smallimages img{
   width: clamp(40px,100%,100px);
+  aspect-ratio: 1/0.7;
   border: 2px solid rgb(197, 195, 190);
  
 }
