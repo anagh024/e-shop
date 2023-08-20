@@ -11,7 +11,7 @@ export default function Item(){
     let toys=useSelector((state)=>state.data)
 
     return (
-        <div className="productsec">
+        <div className="productsec" style={toys.length===0?{display:"block"}:null}>
             {toys.length!==0?toys.map((i,k)=>(<EachItem items={i} index={k} key={k}></EachItem>)):<ItemError></ItemError>}
         </div>
     )

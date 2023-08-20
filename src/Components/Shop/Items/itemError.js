@@ -1,7 +1,7 @@
 export default function ItemError(){
     return(
-        <div>
-            <h1>Sorry we are currently empty</h1>
+        <div style={{width:"100%"}}>
+            <h1>No item's found with the desired filters</h1>
         </div>
     )
 }
