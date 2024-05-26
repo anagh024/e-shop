@@ -7,8 +7,8 @@ export default function Footer(){
            <span> <span className='logo'>&#174;</span>Made in India</span>
             </div>  
             <div className='contact'>
-                <span>Made by akshat Malik</span>
-                <span> +91 7404878385</span>
+                <span>Made by Aryan and Anagh </span>
+                <span> +91 9634594857</span>
                 </div>  
         </div>
     )
